@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Our Faculty | St. Eugene English Medium School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00cadc;
+            --dark: #181d38;
+            --light: #f0fbfc;
+        }
+
+        body { font-family: 'Heebo', sans-serif; background-color: #fcfcfc; }
+
+        .text-gradient {
+            background: linear-gradient(45deg, #00cadc, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Header */
+        .faculty-hero {
+            background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url('./img/banner.jpg') center center no-repeat;
+            background-size: cover;
+            padding: 100px 0;
+        }
+
+        /* Department Filter Section */
+        .filter-btn {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Faculty Card Redesign */
+        .faculty-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            height: 100%;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .faculty-img {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+        }
+
+        .faculty-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .faculty-social {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 202, 220, 0.9);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .faculty-card:hover .faculty-social {
+            bottom: 0;
+        }
+
+        .faculty-social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .dept-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid faculty-hero mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white fw-bold animated slideInDown">Meet Our <span class="text-gradient">Faculty</span></h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center text-uppercase">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Faculty</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <button class="filter-btn active" data-filter="all">All Staff</button>
+                <button class="filter-btn" data-filter="high-school">High School</button>
+                <button class="filter-btn" data-filter="primary">Primary</button>
+                <button class="filter-btn" data-filter="administration">Administration</button>
+            </div>
+
+            <div class="row g-4" id="faculty-grid">
+                <div class="col-lg-3 col-md-6 faculty-item high-school wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="faculty-card">
+                        <div class="faculty-img">
+                            <img src="./img/Teacher 1.JPG" alt="Teacher">
+                            <div class="faculty-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <span class="dept-label">Mathematics</span>
+                            <h5 class="mb-0 mt-1">Teacher Name</h5>
+                            <small class="text-muted">B.Sc, B.Ed (10+ Years Exp.)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 faculty-item primary wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="faculty-card">
+                        <div class="faculty-img">
+                            <img src="./img/Teacher 2.JPG" alt="Teacher">
+                            <div class="faculty-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <span class="dept-label">General Science</span>
+                            <h5 class="mb-0 mt-1">Teacher Name</h5>
+                            <small class="text-muted">M.Sc, B.Ed</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 faculty-item administration wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="faculty-card">
+                        <div class="faculty-img">
+                            <img src="./img/Principle Image.jpg" alt="Teacher">
+                            <div class="faculty-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <span class="dept-label">Principal</span>
+                            <h5 class="mb-0 mt-1">Fr. Bharat OMI</h5>
+                            <small class="text-muted">M.A, M.Ed</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            // Initiate animations
+            new WOW().init();
+
+            // Filter functionality
+            $(".filter-btn").click(function(){
+                var value = $(this).attr('data-filter');
+                
+                // Change active button style
+                $(".filter-btn").removeClass("active");
+                $(this).addClass("active");
+
+                if(value == "all") {
+                    $('.faculty-item').show('450');
+                } else {
+                    // Hide items not in the group, show items that are
+                    $(".faculty-item").not('.'+value).hide('3000');
+                    $('.faculty-item').filter('.'+value).show('3000');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

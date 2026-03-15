@@ -1,0 +1,315 @@
+/* footer.css */
+
+.footer {
+    background: #0b0f19 !important; /* Deeper midnight blue/black */
+}
+
+.footer-brand-title {
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+}
+
+.footer-brand-title span {
+    color: #007bff; /* Primary accent */
+}
+
+.footer-desc {
+    color: #94a3b8;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Modern Social Buttons */
+.btn-social-modern {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-right: 10px;
+    transition: 0.3s all ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn-social-modern:hover {
+    background: #007bff;
+    border-color: #007bff;
+    transform: translateY(-3px);
+}
+
+/* Link Hover Effects */
+.link-hover {
+    transition: 0.3s all;
+    position: relative;
+    padding-left: 0 !important;
+    text-decoration: none !important;
+    color: #94a3b8 !important;
+}
+
+.link-hover:hover {
+    color: #ffffff !important;
+    padding-left: 8px !important;
+}
+
+.link-hover::before {
+    content: '→';
+    opacity: 0;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.link-hover:hover::before {
+    opacity: 1;
+}
+
+/* Gallery Styling */
+.footer-gallery img {
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-gallery img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+/* Container for each gallery image */
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes every image a perfect square */
+    overflow: hidden;    /* Hides parts of the image that don't fit */
+    border-radius: 8px;  /* Optional: gives a modern rounded look */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* The Image itself */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Crops the image to fill the square without stretching */
+    object-position: center; /* Ensures the crop happens from the middle */
+    display: block;
+}
+
+/* Hover effect for a premium feel */
+.gallery-item:hover {
+    transform: scale(1.05);
+    border-color: #007bff; /* Highlights the border on hover */
+    z-index: 5;
+}
+
+/* Optional: If you prefer a rectangular look instead of square, 
+   change aspect-ratio to 4 / 3 or 16 / 9 */
+
+/* Attribution Glass Bar */
+.attribution-glass-bar {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.power-divider {
+    height: 40px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tracking-wider {
+    letter-spacing: 0.1em;
+}
+
+/* Copyright Section */
+.copyright-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-menu a {
+    margin-left: 20px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-menu a:hover {
+    color: #fff;
+}
+
+/* Logo Containers */
+.brand-logo-small {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle background if no logo exists yet */
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.brand-logo-small img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Hover Effect for the entire item */
+.attribution-item {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.attribution-item:hover .brand-logo-small {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.attribution-item:hover h6 {
+    color: #007bff !important; /* Glow effect on the name */
+}
+
+/* Redefined Glass Bar */
+.attribution-glass-bar {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.power-divider {
+    height: 50px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+.tracking-wider {
+    letter-spacing: 0.15em;
+    font-size: 0.7rem !important;
+}
+
+/* futuristic-email.css */
+
+:root {
+    --glow-color: #00d4ff; /* Main neon blue */
+    --input-bg: rgba(255, 255, 255, 0.03);
+}
+
+.newsletter-wrapper {
+    position: relative;
+    max-width: 100%;
+}
+
+.input-group-modern {
+    position: relative;
+    margin-bottom: 15px;
+    background: var(--input-bg);
+    border-radius: 12px;
+    transition: 0.4s ease;
+}
+
+/* The actual input field */
+.modern-input {
+    width: 100%;
+    padding: 15px 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    outline: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+/* Floating Label Logic */
+.floating-label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    transition: 0.3s ease all;
+    font-size: 0.9rem;
+}
+
+.modern-input:focus ~ .floating-label,
+.modern-input:not(:placeholder-shown) ~ .floating-label {
+    top: -10px;
+    left: 12px;
+    font-size: 0.75rem;
+    color: var(--glow-color);
+    background: #0b0f19; /* Matches footer bg */
+    padding: 0 8px;
+}
+
+/* The Neon Glow Border */
+.input-gradient-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 1.5px; /* Border thickness */
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: 0.4s;
+}
+
+.modern-input:focus + .floating-label + .input-gradient-border {
+    background: linear-gradient(45deg, var(--glow-color), #004eeb);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Futuristic Button */
+.btn-futuristic {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+
+.btn-futuristic:hover {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-futuristic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-futuristic:hover::before {
+    left: 100%;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+    .attribution-glass-bar {
+        text-align: center;
+        justify-content: center !important;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,791 @@
+/********** Template CSS **********/
+:root {
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: gold;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures it stays above everything */
+}
+
+/* Popup Content Box */
+.popup-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Text inside popup */
+.popup-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#yes-btn {
+    background-color: green;
+    color: white;
+}
+
+#no-btn {
+    background-color: red;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: -5px;
+    right: 9px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* Prevent background scrolling when popup is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/*** Header carousel ***/
+@media (max-width: 768px) {
+    .header-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 500px;
+    }
+    
+    .header-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-header {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header-inner {
+    background: rgba(15, 23, 43, .7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+
+/*** Service ***/
+.service-item {
+    background: var(--light);
+    transition: .5s;
+}
+
+.service-item:hover {
+    margin-top: -10px;
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+
+
+/*** Categories & Courses ***/
+.category img,
+.course-item img {
+    transition: .5s;
+}
+
+.category a:hover img,
+.course-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/*** Team ***/
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.testimonial-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}
+
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/*** External Css ***/
+
+.logo {
+    width: 50px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Ensure the image behaves as a block element */
+    margin: 0; /* Remove any default margins */
+    max-width: 100%; /* Ensures the logo is responsive and doesn't overflow */
+}
+  
+.me-3 {
+    margin-right: 1rem; /* Keep the margin to the right (from Bootstrap's spacing class) */
+}
+
+
+/* header-carousel.css - PROPER REDESIGN */
+
+.header-carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 65vh; /* Unified height for the section */
+}
+
+.carousel-img {
+    height: 65vh !important;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Deeper gradient for better text legibility on light images */
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 25%, rgba(15, 23, 42, 0.3) 100%);
+    display: flex;
+    align-items: center; /* Vertically centers the card */
+}
+
+/* Glassmorphism Card - FIXED */
+.glass-content-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 3rem; /* Increased padding for breathing room */
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    /* No fixed height here - it will grow with content */
+    display: inline-block;
+    width: 100%;
+}
+
+/* Typography Adjustments */
+.display-2 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsive font sizing */
+    font-weight: 800 !important;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: .5rem;
+}
+
+.modern-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 123, 255, 0.2);
+    color: #38bdf8;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    margin-bottom: 1rem;
+}
+
+.text-gradient {
+
+    background: linear-gradient(45deg, #38bdf8, #818cf8);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+/* Futuristic Buttons */
+
+.btn-primary-modern {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+
+}
+
+
+
+.btn-primary-modern:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.4);
+
+    color: white;
+
+}
+
+
+
+.btn-outline-glass {
+
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+
+.btn-outline-glass:hover {
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-color: white;
+
+    color: white;
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+    .header-carousel-wrapper, 
+    .carousel-img {
+        height: 75vh !important; /* Slightly taller on mobile for better text fit */
+    }
+    
+    .glass-content-card {
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .display-2 {
+        font-size: clamp(1.5rem, 5vw, 1.5rem); /* Responsive font sizing */
+        font-weight: 800 !important;
+        line-height: 1;
+        color: #ffffff;
+        margin-bottom: .5rem;
+    }
+
+    .btn-width {
+        width: 100%;
+    }
+
+    .button-group {
+        justify-content: center;
+        flex-direction: column; /* Stack buttons on mobile */
+    }
+}
+
+/* Other Facilities Same-Height Fix */
+
+.row.g-4.justify-content-center {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Force columns to have the same height */
+.col-lg-4.col-md-6.wow.fadeInUp {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the course item fill the column height */
+.course-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: .5s;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Fix the Image Ratio so different images don't break the layout */
+.course-item .position-relative.overflow-hidden {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Forces a 4:3 rectangular ratio */
+    overflow: hidden;
+}
+
+.course-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image to fill the 4:3 box perfectly */
+    transition: .5s;
+}
+
+/* Ensure the text area takes up the remaining space */
+.course-item .text-center.p-4 {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Keep the bottom bar at the very bottom */
+.course-item .d-flex.border-top {
+    margin-top: auto;
+}
+
+.course-item:hover img {
+    transform: scale(1.1);
+}
+
+/* About Section Redesign */
+.about-img-wrapper {
+    padding: 20px;
+}
+
+/* Decorative background behind image */
+.about-img-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    background: rgba(0, 123, 255, 0.05);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.about-img-frame img {
+    border-bottom: 8px solid #007bff; /* Primary color accent */
+    transition: 0.5s;
+}
+
+.about-img-frame:hover img {
+    transform: translateY(-10px);
+}
+
+
+/* Faculties Uniform Image Fix */
+
+.team-item {
+    transition: .5s;
+    border-radius: 15px; /* Matches your other modern sections */
+    overflow: hidden;
+    height: 80%; /* Ensures cards align if text length varies */
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-item .overflow-hidden {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Professional vertical portrait ratio */
+    position: relative;
+}
+
+.team-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops images to fill the 3:4 box without stretching */
+    object-position: top center; /* Focuses on faces in case of cropping */
+    transition: .5s;
+}
+
+/* Hover Effect */
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Ensure the text container stays aligned */
+.team-item .text-center.p-4 {
+    margin-top: -20px;
+    flex-grow: 1;
+}
+
+/* Refine the social button container background */
+.team-item .position-relative.d-flex.justify-content-center .bg-light {
+    border-radius: 0px 0px 100px 100px;
+    padding: 10px 15px !important;
+}
+
+/* Modern Faculty Carousel */
+.faculty-carousel .owl-stage-outer {
+    padding: 15px 0;
+}
+
+.team-item-modern {
+    background: #ffffff;
+    min-width: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin: 10px;
+    transition: 0.4s ease;
+}
+
+.team-item-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.team-img {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4; /* Consistent Portrait Ratio */
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* See More Button Styling */
+.btn-primary-modern {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    border: none;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+    transition: 0.3s;
+}
+
+.btn-primary-modern:hover {
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.4);
+    transform: scale(1.05);
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cookie Policy | St. Eugene English Medium School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00cadc;
+            --dark-blue: #0f172a;
+        }
+
+        body { font-family: 'Heebo', sans-serif; background-color: #fcfcfc; color: #444; line-height: 1.8; }
+
+        .text-gradient {
+            background: linear-gradient(45deg, #00cadc, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Header */
+        .cookie-hero {
+            background: linear-gradient(rgba(15, 23, 42, .9), rgba(15, 23, 42, .9)), url('./img/banner.jpg') center center no-repeat;
+            background-size: cover;
+            padding: 80px 0;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        .cookie-container {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            margin-top: -60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cookie-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary);
+        }
+
+        h3 { color: var(--dark-blue); font-weight: 700; margin-bottom: 15px; }
+        
+        .icon-cookie {
+            color: var(--primary);
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        .btn-manage {
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-manage:hover {
+            box-shadow: 0 10px 20px rgba(0, 202, 220, 0.3);
+            transform: translateY(-2px);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid cookie-hero wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-4 text-white fw-bold animated slideInDown">Cookie <span class="text-gradient">Policy</span></h1>
+            <p class="text-white-50">Understanding how we use cookies to improve your experience</p>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <div class="cookie-container wow fadeInUp" data-wow-delay="0.3s">
+            
+            <div class="mb-5">
+                <p>To make the <strong>St. Eugene School</strong> website work properly, we sometimes place small data files called cookies on your device. Most big websites do this too. Cookies help our site remember your actions and preferences over a period of time, so you don’t have to keep re-entering them whenever you come back to the site or browse from one page to another.</p>
+            </div>
+
+            <div class="cookie-card">
+                <h3><i class="fas fa-shield-alt icon-cookie"></i>Essential Cookies</h3>
+                <p class="mb-0">These cookies are strictly necessary for the website to function. They enable basic features like page navigation and access to secure areas of the website, such as the Principal's Message read-more section or Admission forms.</p>
+            </div>
+
+            <div class="cookie-card">
+                <h3><i class="fas fa-chart-line icon-cookie"></i>Performance & Analytics</h3>
+                <p class="mb-0">We use these to understand how visitors interact with our website (e.g., which sections of our "About Us" page are most visited). This helps us improve the structure and content of our site for better parent-teacher communication.</p>
+            </div>
+
+            <div class="cookie-card">
+                <h3><i class="fas fa-magic icon-cookie"></i>Functional Cookies</h3>
+                <p class="mb-0">These allow our website to remember choices you make, such as your preferred language or your location in Morigaon, providing a more personalized experience.</p>
+            </div>
+
+            <div class="mt-5">
+                <h3>How to Control Cookies?</h3>
+                <p>You can control and/or delete cookies as you wish – for details, see <strong>aboutcookies.org</strong>. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit our site.</p>
+            </div>
+
+            <div class="text-center mt-5">
+                <button class="btn-manage" onclick="alert('Cookie preferences updated!')">Manage Cookie Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
+</body>
+</html>

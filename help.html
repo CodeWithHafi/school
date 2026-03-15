@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Help Center | St. Eugene English Medium School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00cadc;
+            --dark-blue: #0f172a;
+            --glass-white: rgba(255, 255, 255, 0.05);
+        }
+
+        body { font-family: 'Heebo', sans-serif; background-color: #f4f7f9; color: #444; }
+
+        .text-gradient {
+            background: linear-gradient(45deg, #00cadc, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Help Hero */
+        .help-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('./img/banner.jpg') center center no-repeat;
+            background-size: cover;
+            padding: 80px 0;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        /* Solution Map Cards */
+        .solution-node {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: 0.4s;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .solution-node:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 202, 220, 0.15);
+            border-color: var(--primary);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: #f0fbfc;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            font-size: 2rem;
+            transition: 0.3s;
+        }
+
+        .solution-node:hover .icon-circle {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Visual Guide / Steps */
+        .step-box {
+            background: #ffffff;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 10px 10px 0;
+            text-align: left;
+            font-size: 0.9rem;
+            display: none; /* Hidden by default */
+        }
+
+        .btn-solution {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-solution:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Emergency Support Bar */
+        .emergency-bar {
+            background: var(--dark-blue);
+            color: white;
+            padding: 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid help-hero mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white fw-bold">Solution <span class="text-gradient">Center</span></h1>
+            <p class="text-white-50">Visual guides to solve common problems for Parents & Students.</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="solution-node">
+                    <div class="icon-circle"><i class="fa fa-user-plus"></i></div>
+                    <h4>Admission Help</h4>
+                    <p class="text-muted">I want to enroll my child but don't know the process.</p>
+                    <button class="btn-solution" onclick="toggleStep('step1')">View Solution Map</button>
+                    <div id="step1" class="step-box shadow-sm">
+                        <strong>Steps:</strong><br>
+                        1. Download Prospectus<br>
+                        2. Fill Inquiry Form<br>
+                        3. Visit Office (8:30am - 12pm)<br>
+                        4. Submit Documents
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="solution-node">
+                    <div class="icon-circle"><i class="fa fa-credit-card"></i></div>
+                    <h4>Fee Issues</h4>
+                    <p class="text-muted">I missed the 25th deadline or need fee details.</p>
+                    <button class="btn-solution" onclick="toggleStep('step2')">View Solution Map</button>
+                    <div id="step2" class="step-box shadow-sm">
+                        <strong>Steps:</strong><br>
+                        1. Check Fee Book for dues<br>
+                        2. Pay at Bank/Office<br>
+                        3. Collect Receipt<br>
+                        4. Note: Rs. 10 fine applies after 25th.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="solution-node">
+                    <div class="icon-circle"><i class="fa fa-bus"></i></div>
+                    <h4>Transport/Leave</h4>
+                    <p class="text-muted">My child is sick or I need to change the bus route.</p>
+                    <button class="btn-solution" onclick="toggleStep('step3')">View Solution Map</button>
+                    <div id="step3" class="step-box shadow-sm">
+                        <strong>Steps:</strong><br>
+                        1. Write Leave Application<br>
+                        2. Email Principal's Office<br>
+                        3. Call Transport Head<br>
+                        4. Medical cert. needed for 3+ days.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency-bar wow zoomIn" data-wow-delay="0.7s">
+            <i class="fa fa-headset me-3 text-primary"></i>
+            <span>Still stuck? Reach our 24/7 Support Desk: <strong>+91 xxxxx xxxxx</strong></span>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    
+    <script>
+        new WOW().init();
+        
+        function toggleStep(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
