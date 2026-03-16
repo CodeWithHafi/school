@@ -442,7 +442,7 @@ body.no-scroll {
 /*** External Css ***/
 
 .logo {
-    width: 50px; /* Adjust the width of the logo */
+    width: 70px; /* Adjust the width of the logo */
     height: auto; /* Maintain aspect ratio */
     display: inline-block; /* Ensure the image behaves as a block element */
     margin: 0; /* Remove any default margins */
@@ -450,7 +450,7 @@ body.no-scroll {
 }
   
 .me-3 {
-    margin-right: 1rem; /* Keep the margin to the right (from Bootstrap's spacing class) */
+  margin-right: 1px !important; /* Adjust the spacing between the logo and text */
 }
 
 
